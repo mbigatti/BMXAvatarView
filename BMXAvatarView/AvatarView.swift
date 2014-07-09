@@ -38,6 +38,9 @@ import Foundation
     func bmx_commonInit() {
         self.backgroundColor = UIColor.clearColor()
         self.layer.masksToBounds = true
+        
+        activityIndicatorView.hidden = true
+        addSubview(activityIndicatorView)
     }
     
     @IBInspectable var borderWidth : CGFloat = 2 {
@@ -55,6 +58,7 @@ import Foundation
     override var frame : CGRect {
     didSet {
         self.layer.cornerRadius = max(frame.size.width, frame.size.height) / 2
+        activityIndicatorView.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
     }
     }
     
@@ -69,18 +73,29 @@ import Foundation
         applyFilter()
     }
     }
+    
+    let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
 
     func applyFilter() {
         if !avatarImage {
             return
         }
         
-        let context = CIContext(options: nil)
-        let filter = CIFilter(name: "CIVibrance")
-        let img = CIImage(image: avatarImage)
-        filter.setValue(img, forKey: "inputImage")
-        filter.setValue(vibranceAmount, forKey: "inputAmount")
-        image = UIImage(CIImage: filter.outputImage)
+        image = nil
+        activityIndicatorView.startAnimating()
+        
+        dispatch_async(dispatch_queue_create("", nil), {            
+            let context = CIContext(options: nil)
+            let filter = CIFilter(name: "CIVibrance")
+            let img = CIImage(image: self.avatarImage)
+            filter.setValue(img, forKey: "inputImage")
+            filter.setValue(self.vibranceAmount, forKey: "inputAmount")
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.activityIndicatorView.stopAnimating()
+                self.image = UIImage(CIImage: filter.outputImage)
+            })
+        })
     }
     
     /*
