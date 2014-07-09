@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AvatarViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OOr-sr-KL3" customClass="AvatarView" customModule="BMXAvatarView">
+                                <rect key="frame" x="176" y="176" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Suj-xb-fPH"/>
+                                    <constraint firstAttribute="height" constant="128" id="WIF-f7-yle"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.9999268651008606" green="1" blue="0.9998735785484314" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="avatarImage" value="Avatar.jpg"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.34999999999999998" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FIl-N0-eUr">
+                                <rect key="frame" x="18" y="86" width="444" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="iL5-as-pNQ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vibrance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5g-Ud-bK9">
+                                <rect key="frame" x="20" y="57" width="114" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="RgV-oO-WfV"/>
+                                    <constraint firstAttribute="height" constant="21" id="n9i-Gv-Aik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OOr-sr-KL3" firstAttribute="top" secondItem="FIl-N0-eUr" secondAttribute="bottom" constant="60" id="KPH-sm-RDs"/>
+                            <constraint firstAttribute="trailing" secondItem="FIl-N0-eUr" secondAttribute="trailing" constant="20" id="LSS-t2-rd2"/>
+                            <constraint firstItem="FIl-N0-eUr" firstAttribute="leading" secondItem="p5g-Ud-bK9" secondAttribute="leading" id="ZO5-hG-T6e"/>
+                            <constraint firstItem="FIl-N0-eUr" firstAttribute="top" secondItem="p5g-Ud-bK9" secondAttribute="bottom" constant="8" id="fOp-Fq-0kF"/>
+                            <constraint firstItem="FIl-N0-eUr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="sY3-J5-FLS"/>
+                            <constraint firstAttribute="centerY" secondItem="OOr-sr-KL3" secondAttribute="centerY" id="w8c-Mf-JXn"/>
+                            <constraint firstAttribute="centerX" secondItem="OOr-sr-KL3" secondAttribute="centerX" id="y9T-y4-Szi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarView" destination="OOr-sr-KL3" id="E8z-0R-FRJ"/>
+                        <outlet property="vibranceSlider" destination="FIl-N0-eUr" id="Ota-CD-ez9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Avatar.jpg" width="749" height="512"/>
+    </resources>
+</document>
