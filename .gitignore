@@ -1,4 +1,7 @@
 
-AvatarViewTest/AvatarViewTest.xcodeproj/xcuserdata/*
-BMXAvatarView.xcodeproj/project.xcworkspace/xcuserdata/*
-BMXAvatarView.xcodeproj/xcuserdata/*
+xcuserdata
+project.xcworkspace
+
+Framework/BMXAvatarView.xcodeproj/xcuserdata/*
+TestApp/AvatarViewTest.xcodeproj/xcuserdata/*
+TestApp/AvatarViewTest.xcodeproj/xcuserdata/*

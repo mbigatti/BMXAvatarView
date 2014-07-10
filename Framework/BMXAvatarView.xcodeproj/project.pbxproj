@@ -11,8 +11,8 @@
 		5022318E196C7EFF00F46114 /* BMXAvatarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50223182196C7EFF00F46114 /* BMXAvatarView.framework */; };
 		50223195196C7EFF00F46114 /* BMXAvatarViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50223194196C7EFF00F46114 /* BMXAvatarViewTests.swift */; };
 		5022319F196C7F2700F46114 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022319E196C7F2700F46114 /* AvatarView.swift */; };
-		502231A1196C824A00F46114 /* Avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 502231A0196C824A00F46114 /* Avatar.jpg */; };
 		502231A3196C825600F46114 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502231A2196C825600F46114 /* View.xib */; };
+		50AB8EEC196E839E00423C75 /* Sample-Avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50AB8EEB196E839E00423C75 /* Sample-Avatar.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +47,9 @@
 		50223193196C7EFF00F46114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50223194196C7EFF00F46114 /* BMXAvatarViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMXAvatarViewTests.swift; sourceTree = "<group>"; };
 		5022319E196C7F2700F46114 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
-		502231A0196C824A00F46114 /* Avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avatar.jpg; sourceTree = "<group>"; };
 		502231A2196C825600F46114 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		502231CF196C834500F46114 /* AvatarViewTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AvatarViewTest.xcodeproj; path = AvatarViewTest/AvatarViewTest.xcodeproj; sourceTree = "<group>"; };
+		50AB8EEB196E839E00423C75 /* Sample-Avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sample-Avatar.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +93,10 @@
 		50223184196C7EFF00F46114 /* BMXAvatarView */ = {
 			isa = PBXGroup;
 			children = (
-				502231A0196C824A00F46114 /* Avatar.jpg */,
-				50223187196C7EFF00F46114 /* BMXAvatarView.h */,
-				50223185196C7EFF00F46114 /* Supporting Files */,
 				5022319E196C7F2700F46114 /* AvatarView.swift */,
+				50223187196C7EFF00F46114 /* BMXAvatarView.h */,
+				50AB8EEB196E839E00423C75 /* Sample-Avatar.jpg */,
+				50223185196C7EFF00F46114 /* Supporting Files */,
 				502231A2196C825600F46114 /* View.xib */,
 			);
 			path = BMXAvatarView;
@@ -250,8 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50AB8EEC196E839E00423C75 /* Sample-Avatar.jpg in Resources */,
 				502231A3196C825600F46114 /* View.xib in Resources */,
-				502231A1196C824A00F46114 /* Avatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

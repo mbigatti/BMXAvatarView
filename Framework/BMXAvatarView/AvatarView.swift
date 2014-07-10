@@ -101,7 +101,7 @@ import Foundation
     /*
     override func prepareForInterfaceBuilder() {
         let bundle = NSBundle(forClass: nil)
-        let imagePath = bundle.pathForResource("Avatar", ofType: "jpg")
+        let imagePath = bundle.pathForResource("Sample-Avatar", ofType: "jpg")
         self.image = UIImage(contentsOfFile: imagePath)
     }
     */
