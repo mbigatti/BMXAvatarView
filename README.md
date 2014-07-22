@@ -2,15 +2,15 @@
 
 A simple `UIImageView` that renders the image inside a rounded badge, with optional border and vibrance effect. Written in Swift and designable in Interface Builder.
 
+![image](http://cl.ly/image/2m0N0k1F1R01/BMXAvatarViewExample.png)
+
+For a complete example see the enclosed `BMXAvatarViewTest` project.
+
 ## Features
 
 - designable in Interface Builder
 - customizable border size and color
 - built in vibrance effect
-
-![image](http://cl.ly/image/2m0N0k1F1R01/BMXAvatarViewExample.png)
-
-For a complete example see the enclosed `BMXAvatarViewTest` project.
 
 ## Usage
 
