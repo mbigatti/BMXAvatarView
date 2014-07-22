@@ -8,7 +8,7 @@
 
 import Foundation
 
-@IBDesignable class AvatarView : UIImageView {
+@IBDesignable public class AvatarView : UIImageView {
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -30,12 +30,12 @@ import Foundation
         bmx_commonInit()
     }
 
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         bmx_commonInit()
     }
     
-    func bmx_commonInit() {
+    private func bmx_commonInit() {
         self.backgroundColor = UIColor.clearColor()
         self.layer.masksToBounds = true
         
@@ -43,40 +43,40 @@ import Foundation
         addSubview(activityIndicatorView)
     }
     
-    @IBInspectable var borderWidth : CGFloat = 2 {
+    @IBInspectable public var borderWidth : CGFloat = 2 {
     didSet {
         self.layer.borderWidth = borderWidth
     }
     }
     
-    @IBInspectable var borderColor : UIColor = UIColor.clearColor() {
+    @IBInspectable public var borderColor : UIColor = UIColor.clearColor() {
     didSet {
         self.layer.borderColor = borderColor.CGColor
     }
     }
     
-    override var frame : CGRect {
+    public override var frame : CGRect {
     didSet {
         self.layer.cornerRadius = max(frame.size.width, frame.size.height) / 2
         activityIndicatorView.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
     }
     }
     
-    @IBInspectable var avatarImage : UIImage? {
+    @IBInspectable public var avatarImage : UIImage? {
     didSet {
         applyFilter()
     }
     }
     
-    @IBInspectable var vibranceAmount : CGFloat = 0 {
+    @IBInspectable public var vibranceAmount : CGFloat = 0 {
     didSet {
         applyFilter()
     }
     }
     
-    let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+    private let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
 
-    func applyFilter() {
+    private func applyFilter() {
         if !avatarImage {
             return
         }

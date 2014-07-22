@@ -20,9 +20,6 @@ For a complete example see the enclosed `BMXAvatarViewTest` project.
 
 ![image](http://cl.ly/image/3E1k2K2i1q3z/IB2.png)
 
-## Notes
-- Xcode 6 beta 3: issue below is fixed but to compile the test project you'll need to apply this [fix](http://stackoverflow.com/questions/24622650/xcode-6-beta-3-invalid-virtual-filesystem-overlay-file).
-
 ### Contact
 [http://bigatti.it](http://bigatti.it)  
 [@mbigatti](https://twitter.com/mbigatti)

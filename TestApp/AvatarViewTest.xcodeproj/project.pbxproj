@@ -12,7 +12,7 @@
 		502231B8196C834500F46114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502231B6196C834500F46114 /* Main.storyboard */; };
 		502231BA196C834500F46114 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502231B9196C834500F46114 /* Images.xcassets */; };
 		502231C6196C834500F46114 /* AvatarViewTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502231C5196C834500F46114 /* AvatarViewTestTests.swift */; };
-		502231D9196C835100F46114 /* BMXAvatarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502231D8196C835100F46114 /* BMXAvatarView.framework */; };
+		50C4B34C197E5459009E79A7 /* BMXAvatarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C4B34B197E5459009E79A7 /* BMXAvatarView.framework */; };
 		50CA831E196D63750078E0D9 /* Avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50CA831D196D63750078E0D9 /* Avatar.jpg */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,7 @@
 		502231BF196C834500F46114 /* AvatarViewTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvatarViewTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		502231C4196C834500F46114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		502231C5196C834500F46114 /* AvatarViewTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewTestTests.swift; sourceTree = "<group>"; };
-		502231D8196C835100F46114 /* BMXAvatarView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BMXAvatarView.framework; path = "../build/Debug-iphoneos/BMXAvatarView.framework"; sourceTree = "<group>"; };
+		50C4B34B197E5459009E79A7 /* BMXAvatarView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BMXAvatarView.framework; path = "../Framework/build/Debug-iphoneos/BMXAvatarView.framework"; sourceTree = "<group>"; };
 		50CA831D196D63750078E0D9 /* Avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avatar.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				502231D9196C835100F46114 /* BMXAvatarView.framework in Frameworks */,
+				50C4B34C197E5459009E79A7 /* BMXAvatarView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 		502231A4196C834500F46114 = {
 			isa = PBXGroup;
 			children = (
-				502231D8196C835100F46114 /* BMXAvatarView.framework */,
+				50C4B34B197E5459009E79A7 /* BMXAvatarView.framework */,
 				502231AF196C834500F46114 /* AvatarViewTest */,
 				502231C2196C834500F46114 /* AvatarViewTestTests */,
 				502231AE196C834500F46114 /* Products */,
@@ -336,6 +336,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/max/Progetti/BMXAvatarView/build/Debug-iphoneos",
+					"/Users/max/Progetti/BMXAvatarView/Framework/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = AvatarViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -351,6 +352,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/max/Progetti/BMXAvatarView/build/Debug-iphoneos",
+					"/Users/max/Progetti/BMXAvatarView/Framework/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = AvatarViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

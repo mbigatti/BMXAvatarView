@@ -11,12 +11,12 @@ import BMXAvatarView
 
 class ViewController: UIViewController {
                             
-    @IBOutlet var avatarView: AvatarView
-    @IBOutlet var vibranceSlider: UISlider
+    @IBOutlet var avatarView: AvatarView?
+    @IBOutlet var vibranceSlider: UISlider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        avatarView.vibranceAmount = vibranceSlider.value
+        avatarView!.vibranceAmount = CGFloat(vibranceSlider!.value)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sliderValueChanged(sender: UISlider) {
-        avatarView.vibranceAmount = sender.value
+        avatarView!.vibranceAmount = CGFloat(sender.value)
     }
 
 }
