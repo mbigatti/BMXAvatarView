@@ -16,22 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OOr-sr-KL3" customClass="AvatarView" customModule="BMXAvatarView">
-                                <rect key="frame" x="236" y="236" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="Suj-xb-fPH"/>
-                                    <constraint firstAttribute="height" constant="128" id="WIF-f7-yle"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.9999268651008606" green="1" blue="0.9998735785484314" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="avatarImage" value="Avatar.jpg"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.34999999999999998" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FIl-N0-eUr">
                                 <rect key="frame" x="18" y="146" width="564" height="31"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,20 +33,37 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGf-6N-hvT" customClass="AvatarView" customModule="BMXAvatarView">
+                                <rect key="frame" x="236" y="236" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="atL-P2-7rm"/>
+                                    <constraint firstAttribute="width" constant="128" id="vK9-be-OiM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.9999268651008606" green="1" blue="0.9998735785484314" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="avatarImage" value="Avatar.jpg"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OOr-sr-KL3" firstAttribute="top" secondItem="FIl-N0-eUr" secondAttribute="bottom" constant="60" id="KPH-sm-RDs"/>
                             <constraint firstAttribute="trailing" secondItem="FIl-N0-eUr" secondAttribute="trailing" constant="20" id="LSS-t2-rd2"/>
+                            <constraint firstAttribute="centerX" secondItem="GGf-6N-hvT" secondAttribute="centerX" id="Rcs-Ny-6lA"/>
                             <constraint firstItem="FIl-N0-eUr" firstAttribute="leading" secondItem="p5g-Ud-bK9" secondAttribute="leading" id="ZO5-hG-T6e"/>
                             <constraint firstItem="FIl-N0-eUr" firstAttribute="top" secondItem="p5g-Ud-bK9" secondAttribute="bottom" constant="8" id="fOp-Fq-0kF"/>
+                            <constraint firstItem="p5g-Ud-bK9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="97" id="gxz-5w-zR4"/>
+                            <constraint firstItem="GGf-6N-hvT" firstAttribute="top" secondItem="FIl-N0-eUr" secondAttribute="bottom" constant="60" id="kLT-9O-8lB"/>
                             <constraint firstItem="FIl-N0-eUr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="sY3-J5-FLS"/>
-                            <constraint firstAttribute="centerY" secondItem="OOr-sr-KL3" secondAttribute="centerY" id="w8c-Mf-JXn"/>
-                            <constraint firstAttribute="centerX" secondItem="OOr-sr-KL3" secondAttribute="centerX" id="y9T-y4-Szi"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="avatarView" destination="OOr-sr-KL3" id="E8z-0R-FRJ"/>
+                        <outlet property="avatarView" destination="GGf-6N-hvT" id="3LF-hY-Fop"/>
                         <outlet property="vibranceSlider" destination="FIl-N0-eUr" id="Ota-CD-ez9"/>
                     </connections>
                 </viewController>
