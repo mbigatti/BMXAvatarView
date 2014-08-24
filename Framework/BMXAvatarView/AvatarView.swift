@@ -46,12 +46,12 @@ import Foundation
     
     // MARK: - Initializers
     
-    init(coder aDecoder: NSCoder!) {
+    public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         bmx_initialize()
     }
     
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         bmx_initialize()
     }
@@ -87,7 +87,7 @@ import Foundation
     // MARK: - Privates
     
     private func applyFilter() {
-        if !avatarImage {
+        if (avatarImage == nil) {
             return
         }
         
