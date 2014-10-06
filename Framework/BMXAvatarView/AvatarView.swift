@@ -1,29 +1,38 @@
 //
 //  BMXAvatarView.swift
 //  BMXAvatarView
+//  https://github.com/mbigatti/BMXAvatarView
 //
-//  Created by Massimiliano Bigatti on 08/07/14.
 //  Copyright (c) 2014 Massimiliano Bigatti. All rights reserved.
 //
 
 import Foundation
 
+/**
+    A rounded avatar UIImageView, with optional border and vibrance effect.
+*/
 @IBDesignable public class AvatarView : UIView {
+    
     
     // MARK: - Private Properties
     
+    /// backing image view used to display image
     private var imageView = UIImageView()
+    
+    /// activity indicator displayed while the image is updated
     private let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
     
     
     // MARK: - Public Properties
     
+    /// avatar border width, default 2px
     @IBInspectable public var borderWidth : CGFloat = 2 {
     didSet {
         self.layer.borderWidth = borderWidth
     }
     }
     
+    /// avatar border color, default clear
     @IBInspectable public var borderColor : UIColor = UIColor.clearColor() {
     didSet {
         self.layer.borderColor = borderColor.CGColor
@@ -31,12 +40,14 @@ import Foundation
     }
     }
     
+    /// avatar image
     @IBInspectable public var avatarImage : UIImage? {
     didSet {
         applyFilter()
     }
     }
     
+    /// avatar vibrance effect amount
     @IBInspectable public var vibranceAmount : CGFloat = 0 {
     didSet {
         applyFilter()
@@ -48,20 +59,23 @@ import Foundation
     
     public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        bmx_initialize()
+        commonInit()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        bmx_initialize()
+        commonInit()
     }
     
     public override func awakeFromNib() {
         super.awakeFromNib()
-        bmx_initialize()
+        commonInit()
     }
     
-    private func bmx_initialize() {
+    /**
+        Common initializer
+     */
+    private func commonInit() {
         self.backgroundColor = UIColor.clearColor()
         self.layer.masksToBounds = true
         
@@ -86,6 +100,9 @@ import Foundation
     
     // MARK: - Privates
     
+    /**
+        Apply vibrancy effect filter showing the activity indicator if required
+     */
     private func applyFilter() {
         if (avatarImage == nil) {
             return
