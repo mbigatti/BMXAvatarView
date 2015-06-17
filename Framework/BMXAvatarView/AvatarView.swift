@@ -117,9 +117,8 @@ import Foundation
         self.activityIndicatorView.startAnimating()
         
         dispatch_async(dispatch_queue_create("", nil), {            
-            let context = CIContext(options: nil)
-            let filter = CIFilter(name: "CIVibrance")
-            let img = CIImage(image: self.avatarImage)
+            let filter = CIFilter(name: "CIVibrance")!
+            let img = CIImage(image: self.avatarImage!)
             filter.setValue(img, forKey: "inputImage")
             filter.setValue(self.vibranceAmount, forKey: "inputAmount")
             
